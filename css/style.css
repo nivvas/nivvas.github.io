@@ -21,7 +21,6 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 230px;
-	line-height: 263px;
 	margin-right: 30px;
 }
 .content__icons {}
@@ -56,3 +55,38 @@ body {
 .fa-discord {}
 .fa-github {}
 .fa-telegram {}
+
+@media(max-width: 1280px){
+	.content__container{
+		flex-direction: column;
+	}
+	.content__text{
+		font-size: 15em;
+		margin: 0;
+	}
+}
+
+@media(max-width: 1140px){
+	.content__text{
+		font-size: 10em;
+	}
+}
+
+@media(max-width: 992px){
+	.content__text{
+		font-size: 7em;
+	}
+	.icons{
+		font-size: 40px;
+	}
+}
+
+@media(max-width: 992px){
+	.content__text{
+		font-size: 5em;
+	}
+	.icons{
+		font-size: 30px;
+	}
+}
+
