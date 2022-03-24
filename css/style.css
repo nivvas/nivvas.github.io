@@ -29,18 +29,20 @@ body {
 	font-size: 50px;
 }
 
-.icons:hover li:not(:hover){
-	color: #252428;
-	filter: brightness(70%);
-}
+@media(min-width: 992px){
+	.icons:hover li:not(:hover){
+		color: #252428;
+		filter: brightness(70%);
+	}
 
-.icons:hover li:not(:hover) i{
-	transform: perspective(300px) rotateX(40deg) translateY(5px);
-	text-shadow: 0 5px 0  #010406, 0 5px 10px #B518FF;
-}
+	.icons:hover li:not(:hover) i{
+		transform: perspective(300px) rotateX(40deg) translateY(5px);
+		text-shadow: 0 5px 0  #010406, 0 5px 10px #B518FF;
+	}
 
-.icons li:hover i{
-	transform: scale(1.2) translateY(-5px);
+	.icons li:hover i{
+		transform: scale(1.2) translateY(-5px);
+	}
 }
 
 .icons__item {}
