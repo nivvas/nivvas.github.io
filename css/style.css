@@ -51,7 +51,7 @@ body {
 	margin-left: 10px;
 }
 .icon {
-	transition: 600ms cubic-bezier(0,0,0,1) all;
+	transition: 400ms cubic-bezier(0,0,0,1) all;
 }
 .fa-brands {}
 .fa-vk {}
