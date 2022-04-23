@@ -1,52 +1,93 @@
-<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+
 <!DOCTYPE html>
 <!-- Оболочка документа, указываем язык содержимого -->
 <html lang="ru">
-	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
-	<head>
-		<!-- Заголовок страницы в браузере -->
-		<title>nivvas</title>
-		<!-- Подключаем CSS -->
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/normalize.css" />
-				<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="styles/styles.css" type="text/css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" type="text/css">
-		<link rel="icon" href="img/logo2.png"  type="image/png">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 
-		<!-- Кодировка страницы -->
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	    <meta name="format-detection" content="telephone=no">
-	</head>
-	<!-- Отображаемое тело страницы -->
-	<body>
-		<content class="content">
-			<div class="content__container">
-				<div class="content__text"><p>nivvas</p></div>
-				<div class="left__icons">
-					<div class="content__icons">
-						<ul class="icons">
-							<li class="icons__item">
-								<i class="icon fa-brands fa-vk" onclick="javascript:window.open('https://vk.com/nivvas', '_blank');"></i>
-							</li>
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>nivvas</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		type="text/css">
+	
+	<link rel="icon" href="img/2.png" type="image/png">
 
-							<li class="icons__item">
-								<i class="icon fa-brands fa-discord" onclick="javascript:prompt('Copy this:', 'toxic#9959');"></i>
-							</li>
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+</head>
+<!-- Отображаемое тело страницы -->
 
-							<li class="icons__item">
-								<i class="icon fa-brands fa-github" onclick="javascript:window.open('https://github.com/nivvas', '_blank');"></i>
-							</li>
-							
-							<li class="icons__item">
-								<i class="icon fa-brands fa-telegram" onclick="javascript:window.open('https://t.me/nivvas', '_blank');"></i>
-							</li>
-						</ul>
-					</div>
-				</div>		
+<body>
+	<content class="content">
+		<div class="content__container">
+			<div class="content__text">
+				<p>nivvas</p>
 			</div>
-		</content>
-	</body>
+			<div class="left__icons">
+				<div class="content__icons">
+					<ul class="icons">
+						<li class="icons__item">
+							<i class="icon fa-brands fa-vk"
+								onclick="javascript:window.open('https://vk.com/nivvas', '_blank');"></i>
+						</li>
+
+						<li class="icons__item">
+							<i class="icon fa-brands fa-discord"
+								onclick="javascript:prompt('Copy this:', 'toxic#9959');"></i>
+						</li>
+
+						<li class="icons__item">
+							<i class="icon fa-brands fa-github"
+								onclick="javascript:window.open('https://github.com/nivvas', '_blank');"></i>
+						</li>
+
+						<li class="icons__item">
+							<i class="icon fa-brands fa-telegram"
+								onclick="javascript:window.open('https://t.me/nivvas', '_blank');"></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="arrow-down arrow-down_animated">
+			<svg width="65" height="39" viewBox="0 0 65 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M32.5 23.9698L18.2047 9.18513C17.1379 8.08066 15.4083 8.08066 14.3416 9.18513C13.275 10.2895 13.275 12.0802 14.3416 13.1848L30.4313 29.8251C30.9997 30.4136 31.7558 30.6785 32.5 30.6397C33.2443 30.6785 34.0003 30.4136 34.5688 29.8251L50.6584 13.1848C51.7252 12.0803 51.7252 10.2897 50.6584 9.18513C49.5916 8.08059 47.8621 8.08066 46.7956 9.18513L32.5 23.9698Z"
+					fill="white" />
+			</svg>
+		</div>
+	</content>
+	<div class="timer__wrapper">
+		<div class="time__info">
+			until 2023:
+		</div>
+		<div class="timer">
+			<div class="timer__block">
+				<span id="days">12</span>
+				days
+			</div>
+			<div class="timer__block">
+				<span id="hours">20</span>
+				hours
+			</div>
+			<div class="timer__block">
+				<span id="minutes">56</span>
+				minutes
+			</div>
+			<div class="timer__block">
+				<span id="seconds">20</span>
+				seconds
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
 </html>
