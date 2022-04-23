@@ -188,3 +188,7 @@ body {
 	text-transform: uppercase;
 	margin-bottom: 30px;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
