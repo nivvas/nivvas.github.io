@@ -189,6 +189,6 @@ body {
 	margin-bottom: 30px;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 0;
 }
