@@ -4,19 +4,22 @@ body {
 	background-color: #000;
 	color: #A512EA;
 }
-.content{
+
+.content {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	height: 100vh;
+	flex-direction: column;
 }
+
 .content__container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	-webkit-user-select: none; 
 }
+
 .content__text {
 	font-family: 'Lilita One';
 	font-style: normal;
@@ -24,72 +27,164 @@ body {
 	font-size: 230px;
 	margin-right: 30px;
 }
+
 .content__icons {}
+
 .icons {
 	display: flex;
 	font-size: 50px;
 }
 
-@media(min-width: 992px){
-	.icons:hover li:not(:hover){
+@media(min-width: 992px) {
+	.icons:hover li:not(:hover) {
 		color: #252428;
 		filter: brightness(70%);
 	}
 
-	.icons:hover li:not(:hover) i{
+	.icons:hover li:not(:hover) i {
 		transform: perspective(300px) rotateX(40deg) translateY(5px);
-		text-shadow: 0 5px 0  #010406, 0 5px 10px #B518FF;
+		text-shadow: 0 5px 0 #010406, 0 5px 10px #B518FF;
 	}
 
-	.icons li:hover i{
+	.icons li:hover i {
 		transform: scale(1.2) translateY(-5px);
 	}
 }
 
 .icons__item {}
-.icons__item + .icons__item {
+
+.icons__item+.icons__item {
 	margin-left: 10px;
 }
+
 .icon {
-	transition: 400ms cubic-bezier(0,0,0,1) all;
+	transition: 600ms cubic-bezier(0, 0, 0, 1) all;
 }
+
 .fa-brands {}
+
 .fa-vk {}
+
 .fa-discord {}
+
 .fa-github {}
+
 .fa-telegram {}
 
-@media(max-width: 1280px){
-	.content__container{
+@media(max-width: 1280px) {
+	.content__container {
 		flex-direction: column;
 	}
-	.content__text{
+
+	.content__text {
 		font-size: 15em;
 		margin: 0;
 	}
 }
 
-@media(max-width: 1140px){
-	.content__text{
+@media(max-width: 1140px) {
+	.content__text {
 		font-size: 10em;
 	}
 }
 
-@media(max-width: 992px){
-	.content__text{
+@media(max-width: 992px) {
+	.content__text {
 		font-size: 7em;
 	}
-	.icons{
+
+	.icons {
 		font-size: 40px;
 	}
 }
 
-@media(max-width: 992px){
-	.content__text{
+@media(max-width: 992px) {
+	.content__text {
 		font-size: 5em;
 	}
-	.icons{
+
+	.icons {
 		font-size: 30px;
 	}
 }
 
+
+@media(max-width: 1050px) {
+	.icons:target li:not(:target) {
+		color: #252428;
+		filter: brightness(70%);
+	}
+
+	.icons:target li:not(:target) i {
+		transform: perspective(300px) rotateX(40deg) translateY(5px);
+		text-shadow: 0 5px 0 #010406, 0 5px 10px #B518FF;
+	}
+
+	.icons li:target i {
+		transform: scale(1.2) translateY(-5px);
+	}
+}
+
+.arrow-down {
+	position: absolute;
+	bottom: 30px;
+	transition: all .5s ease-in-out;
+}
+
+.arrow-down_animated {
+	animation-name: jump;
+	animation-duration: 1.5s;
+	animation-iteration-count:infinite;
+
+}
+
+@keyframes jump {
+	0% {
+		bottom: 30px;
+	}
+	50% {
+		bottom: 45px;
+	}
+	100% {
+		bottom: 30px;
+	}
+}
+.timer__wrapper{
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: -100px;
+}
+.timer {
+
+	display: flex;
+}
+.timer__block {
+	font-family: 'Lilita One';
+	font-style: normal;
+	padding: 10px 20px;
+	border-radius: 5px;
+    background: rgb(222, 222, 222);
+    box-shadow: 0 4px 20px rgba(217, 0, 255, 0.5);
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+}
+.timer__block span{
+	font-size: 2em;
+	display: block;
+}
+
+.timer__block + .timer__block{
+	margin-left: 30px;
+}
+
+.time__info{
+	font-family: 'Lilita One';
+	font-style: normal;
+	font-size: 3em;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
