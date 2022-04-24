@@ -1,6 +1,6 @@
 'use strict';
 
-const deadline = '2023'
+const deadline = new Date().getFullYear() + 1;
 
 function countDate(end) {
     const t = Date.parse(end) - Date.parse(new Date()),
