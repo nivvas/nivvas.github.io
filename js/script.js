@@ -1,6 +1,8 @@
 'use strict';
 
 const deadline = new Date().getFullYear() + 1;
+const infoDate = document.querySelector('.time__info');
+infoDate.textContent = `until ${deadline}:`;
 
 function countDate(end) {
     const t = Date.parse(end) - Date.parse(new Date()),
