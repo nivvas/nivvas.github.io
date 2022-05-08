@@ -18,14 +18,15 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
 
 .content__text {
 	font-family: 'Lilita One';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 230px;
-	margin-right: 30px;
+	font-size: 150px;
+	margin-right: 20px;
 }
 
 .content__icons {}
@@ -33,6 +34,12 @@ body {
 .icons {
 	display: flex;
 	font-size: 50px;
+}
+
+.icons__item {}
+
+.item-icon{
+	margin-left: 15px;
 }
 
 @media(min-width: 992px) {
@@ -51,14 +58,9 @@ body {
 	}
 }
 
-.icons__item {}
-
-.icons__item+.icons__item {
-	margin-left: 10px;
-}
 
 .icon {
-	transition: 600ms cubic-bezier(0, 0, 0, 1) all;
+	transition: .6s cubic-bezier(0, 0, 0, 1) all;
 }
 
 .fa-brands {}
@@ -160,6 +162,7 @@ body {
 .timer {
 
 	display: flex;
+
 }
 .timer__block {
 	font-family: 'Lilita One';
@@ -191,4 +194,81 @@ body {
 
 body::-webkit-scrollbar {
   width: 0;
+}
+
+@media(max-width: 400px) {
+	.timer__wrapper{
+		display: none;
+	}
+	.arrow-down{
+		display: none;
+	}
+}
+
+
+.video-btn{
+
+	background-color:transparent;
+	margin-top: 30px;
+	transition: .5s;
+}
+
+video{
+	opacity: 0;
+	position: absolute;
+	z-index: -99;
+	transition: .3s;
+	border-radius: 2px;
+}
+
+.btn__container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: .5s;
+}	
+
+.content__text2{
+	display: block;
+	position: absolute;
+	transition: .5s;
+	top: 50%;
+	left: 50%;
+	font-family: 'Lilita One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 50px;
+	margin-right: 30px;
+}
+
+.content__text2.ctn{
+	font-size: 50px;
+}
+
+.hide{
+	display: none;
+}
+
+.left__icons2{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: .5s;
+}
+
+.icons2.ctn3{
+	flex-direction: column;
+	text-align: center;
+}
+
+.icons2{
+	display: flex;
+	font-size: 20px;
+	
+}
+
+.btnbtnbtn{
+	height: 30px;
+	width: 30px;
+	background-color: transparent;
 }
