@@ -52,7 +52,20 @@ function setTime() {
 setTime()
 
 const timerWrapper = document.querySelector('.timer__wrapper'),
-    arrow = document.querySelector('.arrow-down')
+    arrow = document.querySelector('.arrow-down');
+
+function scrollTo(elem){
+    window.scroll({
+        left: 0,
+        top: elem.offsetTop,
+        behavior: 'smooth'
+    })
+};
+
+arrow.addEventListener('click', () => {
+    scrollTo(timerWrapper)
+});
+    
 
 window.addEventListener('scroll', () => {
     function scrollAnim() {
@@ -60,6 +73,9 @@ window.addEventListener('scroll', () => {
             scrollOffset = timerWrapper.scrollTop + timerWrapper.scrollHeight;
         if (windowCenter >= scrollOffset) {
             arrow.style.transform = 'rotate(180deg)'
+            arrow.addEventListener('click', () => {
+                scrollTo(document.querySelector('.content'))
+            });
         } else {
             arrow.style.transform = ''
         }
@@ -71,11 +87,12 @@ window.addEventListener('scroll', () => {
 });
 const loader = document.querySelector('.wrapper__loader');
 window.addEventListener('load', () => {
-    loader.classList.add('hide');
+    loader.classList.add('hide')
     setTimeout(() => {
         loader.remove();
     }, 1000);
 });
+
 const btnPlay = document.querySelector('.video-btn'),
     text2 = document.querySelector('.content__text2'),
     text = document.querySelector('.content__text'),
@@ -123,7 +140,7 @@ function moveTo(x, y, elem){
 function moveToStartAll(){
     moveTo(text.getBoundingClientRect().x + text.offsetWidth / 2 + 'px', text.getBoundingClientRect().y + 'px', text2);
     moveTo(icons.getBoundingClientRect().x + 'px', icons.getBoundingClientRect().y + 'px', icons2);
-    moveTo(49 + '%', wholeCont.getBoundingClientRect().y + wholeCont.offsetHeight + 30 + 'px', videoBtnCont);    
+    moveTo(49 + '%', 66 + '%', videoBtnCont);    
 }
 moveToStartAll();
 
