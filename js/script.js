@@ -70,83 +70,64 @@ window.addEventListener('scroll', () => {
 
 });
 
-const btnPlay = document.querySelector('.video-btn');
-const bbb = document.querySelector('.content__text2'),
+const btnPlay = document.querySelector('.video-btn'),
+    text2 = document.querySelector('.content__text2'),
     text = document.querySelector('.content__text'),
     icons = document.querySelector('.left__icons'),
     icons2 = document.querySelector('.left__icons2'),
-    iii = document.querySelector('.icons2'),
-    videoBtn = document.querySelector('.btn__container'),
-    VVV = document.querySelector('.video-btn'),
+    iconsItems = document.querySelector('.icons2'),
+    videoBtnCont = document.querySelector('.btn__container'),
+    btnVideo = document.querySelector('.video-btn'),
     wholeCont = document.querySelector('.content__container'),
     video = document.querySelector('video');
 
 let count = 0
 video.volume = 0.4;
+
 btnPlay.addEventListener('click', () => {
+    text2.classList.toggle('hide');
+    icons2.classList.toggle('hide');
+    icons.classList.toggle('hide');
+    text.classList.toggle('hide');
     if (count == 0) {
         count++;
-        bbb.classList.remove('hide');
-        icons2.classList.remove('hide');
-
-        icons.classList.add('hide');
-        text.classList.add('hide');
-        console.dir(video);
-        bbb.classList.add('ctn');
-        bbb.style.left = (document.documentElement.offsetWidth / 2 - bbb.offsetWidth / 2) + 'px';
-        bbb.style.top = video.offsetTop / 2 - bbb.offsetHeight / 2 + 'px';
-
-        icons2.style.left =  (document.documentElement.offsetWidth - ((document.documentElement.offsetWidth - video.clientWidth) / 4)) - 28 + 'px';
-        console.dir(icons2)
-        icons2.style.top = '80%';
-        iii.classList.add('ctn3');
-        VVV.classList.remove('video-btn');
-        VVV.classList.add('btnbtnbtn');
-        VVV.innerHTML = '<?xml version="1.0" ?><svg fill="none" height="27" viewBox="0 0 20 27" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M5 25.9H4.5C3 25.9 1.70001 24.705 1.70001 23.1117V4.68841C1.70001 3.19463 2.9 1.90002 4.5 1.90002H5C6.5 1.90002 7.79999 3.09505 7.79999 4.68841V23.1117C7.79999 24.705 6.5 25.9 5 25.9Z" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M15.5 25.9H15C13.5 25.9 12.2 24.705 12.2 23.1117V4.68841C12.2 3.19463 13.4 1.90002 15 1.90002H15.5C17 1.90002 18.3 3.09505 18.3 4.68841V23.1117C18.2 24.705 17 25.9 15.5 25.9Z" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>'
-        
-        videoBtn.style.left = (document.documentElement.offsetWidth - ((document.documentElement.offsetWidth - video.clientWidth) / 4)) - videoBtn.offsetWidth / 2 + 'px';
-        videoBtn.style.top = video.offsetTop / 2 - videoBtn.offsetHeight / 2 + 'px';
-        
+        moveTo((document.documentElement.offsetWidth / 2 - text2.offsetWidth / 2) + 'px', video.offsetTop / 2 - text2.offsetHeight / 2 + 'px', text2);
+        moveTo((document.documentElement.offsetWidth - ((document.documentElement.offsetWidth - video.clientWidth) / 4)) - 28 + 'px', '80%', icons2);
+        moveTo((document.documentElement.offsetWidth - ((document.documentElement.offsetWidth - video.clientWidth) / 4)) - videoBtnCont.offsetWidth / 2 + 'px', video.offsetTop / 2 - videoBtnCont.offsetHeight / 2 + 'px', videoBtnCont);
+    
+        btnVideo.innerHTML = '<img src="img/pause.svg" alt="">';       
         video.style.opacity = '100%';
         video.play();
-
-
     } else {
         count--;
-        bbb.classList.add('hide');
-        text.classList.remove('hide');
-        bbb.classList.remove('ctn');
-        bbb.style.left = text.getBoundingClientRect().x + text.offsetWidth / 2 + 'px';
-        bbb.style.top = text.getBoundingClientRect().y + 'px';
 
-        icons.classList.remove('hide');
-        icons2.classList.add('hide');
-        icons2.style.left = icons.getBoundingClientRect().x + 'px';
-        icons2.style.top = icons.getBoundingClientRect().y + 'px';
-        iii.classList.remove('ctn3')
-
-        videoBtn.style.left = wholeCont.getBoundingClientRect().x + wholeCont.offsetWidth / 2 - videoBtn.clientWidth / 2 + 'px';
-        videoBtn.style.top = wholeCont.getBoundingClientRect().y + wholeCont.offsetHeight + 'px';
+        moveToStartAll();
 
         video.style.opacity = '0%';
         video.pause();
-        VVV.classList.add('video-btn');
-        VVV.classList.remove('btnbtnbtn');
-        VVV.innerHTML = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="16" cy="16" r="15" stroke="white" stroke-width="2"/> <path d="M23.491 16.0234L12.4997 22.5468L12.3459 9.76637L23.491 16.0234Z" fill="#C4C4C4" stroke="white" stroke-width="2"/> </svg>';
+        btnVideo.innerHTML = '<img src="img/Group 1.svg" alt="">';
     }
-
-
 });
 
-bbb.style.left = text.getBoundingClientRect().x + text.offsetWidth / 2 + 'px';
-bbb.style.top = text.getBoundingClientRect().y + 'px';
+function moveTo(x, y, elem){
+    elem.style.left = x;
+    elem.style.top = y;
+};
 
-icons2.style.left = icons.getBoundingClientRect().x + 'px';
-icons2.style.top = icons.getBoundingClientRect().y + 'px';
+function moveToStartAll(){
+    moveTo(text.getBoundingClientRect().x + text.offsetWidth / 2 + 'px', text.getBoundingClientRect().y + 'px', text2);
+    moveTo(icons.getBoundingClientRect().x + 'px', icons.getBoundingClientRect().y + 'px', icons2);
+    moveTo(49 + '%', wholeCont.getBoundingClientRect().y + wholeCont.offsetHeight + 30 + 'px', videoBtnCont);    
+}
+moveToStartAll();
 
-videoBtn.style.left = wholeCont.getBoundingClientRect().x + wholeCont.offsetWidth / 2 - videoBtn.clientWidth / 2 + 'px';
-videoBtn.style.top = wholeCont.getBoundingClientRect().y + wholeCont.offsetHeight + 'px';
-
-
-
-
+video.addEventListener('ended', () => {
+    text2.classList.toggle('hide');
+    icons2.classList.toggle('hide');
+    icons.classList.toggle('hide');
+    text.classList.toggle('hide');
+    moveToStartAll();
+    count--;
+    video.style.opacity = '0%';
+    btnVideo.innerHTML = '<img src="img/Group 1.svg" alt="">';
+});
