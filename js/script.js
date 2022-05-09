@@ -69,7 +69,13 @@ window.addEventListener('scroll', () => {
     scrollAnim()
 
 });
-
+const loader = document.querySelector('.wrapper__loader');
+window.addEventListener('load', () => {
+    loader.classList.add('hide');
+    setTimeout(() => {
+        loader.remove();
+    }, 1000);
+});
 const btnPlay = document.querySelector('.video-btn'),
     text2 = document.querySelector('.content__text2'),
     text = document.querySelector('.content__text'),
