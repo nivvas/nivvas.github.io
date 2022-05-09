@@ -196,7 +196,7 @@ body::-webkit-scrollbar {
   width: 0;
 }
 
-@media(max-width: 400px) {
+@media(max-width: 600px) {
 	.timer__wrapper{
 		display: none;
 	}
@@ -271,4 +271,13 @@ video{
 	height: 30px;
 	width: 30px;
 	background-color: transparent;
+}
+
+@media (max-width: 1380px){
+	.left__icons2{
+		display: none;
+	}
+	.btn__container .video-btn svg{
+		display: none;
+	}
 }
