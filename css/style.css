@@ -209,11 +209,12 @@ body::-webkit-scrollbar {
 .video-btn{
 
 	background-color:transparent;
-	margin-top: 30px;
+
 	transition: .5s;
 }
 
 video{
+	width: 80vw;
 	opacity: 0;
 	position: absolute;
 	z-index: -99;
@@ -223,8 +224,6 @@ video{
 
 .btn__container{
 	position: absolute;
-	top: 50%;
-	left: 50%;
 	transition: .5s;
 }	
 
@@ -241,10 +240,6 @@ video{
 	margin-right: 30px;
 }
 
-.content__text2.ctn{
-	font-size: 50px;
-}
-
 .hide{
 	display: none;
 }
@@ -256,27 +251,14 @@ video{
 	transition: .5s;
 }
 
-.icons2.ctn3{
+.icons2{
+	display: flex;
+	font-size: 20px;
 	flex-direction: column;
 	text-align: center;
 }
 
-.icons2{
-	display: flex;
-	font-size: 20px;
-	
-}
-
-.btnbtnbtn{
-	height: 30px;
-	width: 30px;
-	background-color: transparent;
-}
-
 @media (max-width: 1380px){
-	.left__icons2{
-		display: none;
-	}
 	.btn__container .video-btn svg{
 		display: none;
 	}
