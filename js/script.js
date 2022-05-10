@@ -141,7 +141,7 @@ function moveTo(x, y, elem){
 function moveToStartAll(){
     moveTo(text.getBoundingClientRect().x + text.offsetWidth / 2 + 'px', text.getBoundingClientRect().y + 'px', text2);
     moveTo(icons.getBoundingClientRect().x + 'px', icons.getBoundingClientRect().y + 'px', icons2);
-    moveTo(document.documentElement.offsetWidth /2 - videoBtnCont /2  + 'px', 66 + '%', videoBtnCont);    
+    moveTo(49  + '%', 66 + '%', videoBtnCont);    
 }
 moveToStartAll();
 
