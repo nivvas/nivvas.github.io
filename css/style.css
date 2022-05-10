@@ -234,7 +234,18 @@ video {
 	position: absolute;
 	transition: .5s;
 }
-
+.animPlay{
+	animation: animPlay 1.5s infinite;
+}
+@keyframes animPlay{
+	0%{
+		transform: scale(1);
+	}50%{
+		transform: scale(1.17);
+	}100%{
+		transform: scale(1);
+	}
+}
 .content__text2 {
 	display: block;
 	position: absolute;
