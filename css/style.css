@@ -3,6 +3,10 @@
 body {
 	background-color: #000;
 	color: #A512EA;
+	-ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none; 
 }
 
 .content {
@@ -349,7 +353,10 @@ video {
 	}
 }
 
-/* canvas{
-	position: fixed;
-	z-index: -200;
-} */
+.video-btn img{
+	transition: .5s;
+}
+.video-btn img:hover{
+	transform: scale(1.2); 
+}
+
