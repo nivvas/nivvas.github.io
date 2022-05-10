@@ -112,6 +112,7 @@ btnPlay.addEventListener('click', () => {
     icons2.classList.toggle('hide');
     icons.classList.toggle('hide');
     text.classList.toggle('hide');
+    btnVideo.classList.toggle('animPlay');
     if (count == 0) {
         count++;
         moveTo((document.documentElement.offsetWidth / 2 - text2.offsetWidth / 2) + 'px', video.offsetTop / 2 - text2.offsetHeight / 2 + 'px', text2);
